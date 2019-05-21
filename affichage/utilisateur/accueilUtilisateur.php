@@ -1,5 +1,9 @@
 <?php
-    include("../traitement/accueilUtilisateur");
+    session_start();
+    include("../navbar.php");
+    include("../../methodes/methodes.php");
+    include("../../methodes/request.php");
+    include("../../traitement/utilisateur/accueilUtilisateur.php");
 ?>
 
 <!DOCTYPE html>
@@ -9,20 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Nav-bar responsive">
     <meta name="author" content="Avenel B. / Magne M.A.">
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/homestyle.css" rel="stylesheet">
-    <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <title>Accuei</title>
-    <link rel="icon" type="img/png" href="../img/favicon.png" />
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/homestyle.css" rel="stylesheet">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <title>Accueil utilisateur</title>
+    <link rel="icon" type="img/png" href="../../img/favicon.png" />
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/reseau/index.php">bibliotheque</a>
-      </div>
-	<a href="traitement/deconnexion.php"><button type="button" class="btn btn-primary">Se dÃ©connecter</button></a>
-    </nav>
     <div class="container margtop">
       <div class="row">
       </div>

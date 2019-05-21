@@ -11,11 +11,11 @@
 		$role=connexion($code,$conn);
 		if(strpos($role, 'Utilisateur') !== false){
 			$_SESSION['role']='Utilisateur';
-			header("Location: ../affichage/accueilUtilisateur.php");
+			header("Location: ../affichage/utilisateur/accueilUtilisateur.php");
 		}
 		else if(strpos($role, 'Administrateur') !== false){
 			$_SESSION['role']='Administrateur';
-			header("Location: ../affichage/accueilAdministrateur.php");
+			header("Location: ../affichage/administrateur/gestionEmprunts.php");
 		}else{
 			header("Location: ../index.php?pbLogin");
 		}

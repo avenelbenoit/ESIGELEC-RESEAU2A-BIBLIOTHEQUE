@@ -6,9 +6,8 @@
         $reponse = $conn->query("SELECT * FROM identifiants WHERE numero='$code'");
         while ($donnees = $reponse->fetch_assoc())
         {
-            $role = $donnees['role'] . '<br />';
+            $role = $donnees['role'];
         }
         return $role;
     }
-
 ?>
