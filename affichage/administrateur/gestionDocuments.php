@@ -24,7 +24,6 @@
       <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            Gestion de documents
           <div class="card-deck mb-3 text-center">
             <div class="card mb-4 shadow-sm">
               <div class="card-header">
@@ -46,32 +45,14 @@
             </div>
             <div class="card mb-4 shadow-sm">
               <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Modifier</h4>
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled mt-3 mb-4">
-                    <li><label for="ISBN">ISBN</label>
-                    <input type="text" class="form-control" id="ISBN"> </li>                    
-                    <li><label for="titre">Titre</label>
-                    <input type="text" class="form-control" id="titre"> </li>
-                    <li><label for="auteur">Auteur</label>
-                    <input type="text" class="form-control" id="auteur"> </li>
-                    <li><label for="nbExemplaire">Nombre d'exemplaire</label>
-                    <input type="text" class="form-control" id="nbExemplaire"> </li>
-                </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Modifier</button>
-              </div>
-            </div>
-            <div class="card mb-4 shadow-sm">
-              <div class="card-header">
                 <h4 class="my-0 font-weight-normal">Supprimer</h4>
               </div>
-              <div class="card-body">
+              <div class="card-body" style="margin-top:60%">
                 <ul class="list-unstyled mt-3 mb-4">
                     <li><label for="ISBN">ISBN</label>
                     <input type="text" class="form-control" id="ISBN"> </li>
                   </ul>
-                <button type="button" class="btn btn-lg btn-block btn-primary">Supprimer</button>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Supprimer</button>
               </div>
             </div>
         </div>

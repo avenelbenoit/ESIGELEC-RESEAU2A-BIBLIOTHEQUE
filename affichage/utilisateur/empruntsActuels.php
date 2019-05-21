@@ -3,7 +3,7 @@
     include("../navbar.php");
     include("../../methodes/methodes.php");
     include("../../methodes/request.php");
-    include("../../traitement/utilisateur/accueilUtilisateur.php");
+    include("../../traitement/utilisateur/empruntsActuels.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,17 +17,16 @@
     <link href="../../css/homestyle.css" rel="stylesheet">
     <script src="../../js/jquery.js"></script>
     <script src="../../js/bootstrap.js"></script>
-    <title>Accueil utilisateur</title>
+    <title>emprunts encours</title>
     <link rel="icon" type="img/png" href="../../img/favicon.png" />
   </head>
   <body>
-    <div class="container margtop">
+    <div class="container-fluid margtop">
       <div class="row">
       </div>
       <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-            Liste des livres en cours d'emprunt
             <table class="table">
               <thead class="thead-dark">
                 <tr>
@@ -43,25 +42,6 @@
                   <td>Mark</td>
                   <td>21/05/2019</td>
                   <td>31/05/2019</td>
-                </tr>
-              </tbody>
-            </table>
-            Historique des lives empruntés
-            <table class="table">
-              <thead class="thead-light">
-                <tr>
-                  <th scope="col">Titre</th>
-                  <th scope="col">Auteur</th>
-                  <th scope="col">Date d'emprunt</th>
-                  <th scope="col">Date de retour</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
                 </tr>
               </tbody>
             </table>

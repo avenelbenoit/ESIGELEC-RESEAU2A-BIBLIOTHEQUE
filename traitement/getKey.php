@@ -11,7 +11,7 @@
 		$role=connexion($code,$conn);
 		if(strpos($role, 'Utilisateur') !== false){
 			$_SESSION['role']='Utilisateur';
-			header("Location: ../affichage/utilisateur/accueilUtilisateur.php");
+			header("Location: ../affichage/utilisateur/empruntsActuels.php");
 		}
 		else if(strpos($role, 'Administrateur') !== false){
 			$_SESSION['role']='Administrateur';

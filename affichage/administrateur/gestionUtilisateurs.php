@@ -26,7 +26,6 @@
       <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            Gestion d'utilisateur
           <div class="card-deck mb-3 text-center">
             <div class="card mb-4 shadow-sm">
               <div class="card-header">
@@ -36,9 +35,9 @@
                 <ul class="list-unstyled mt-3 mb-4">
                     <li><label for="exampleInputEmail1">Adresse mail</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" > </li>
-                    <li><button type="button" class="btn btn-lg btn-block btn-outline-primary">Badge</button></li>
+                    <li><button type="button" class="btn btn-lg btn-block btn-outline-primary small-margtop">Badge</button></li>
                 </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Créer</button>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Créer</button>
               </div>
             </div>
             <div class="card mb-4 shadow-sm">
@@ -49,7 +48,7 @@
                 <ul class="list-unstyled mt-3 mb-4">
                     <li><label for="exampleInputEmail1">Adresse mail</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" > </li>
-                    <li><button type="button" class="btn btn-lg btn-block btn-outline-primary">Nouveau badge</button></li>
+                    <li><button type="button" class="btn btn-lg btn-block btn-outline-primary small-margtop">Nouveau badge</button></li>
                 </ul>
                 <button type="button" class="btn btn-lg btn-block btn-primary">Modifier</button>
               </div>
@@ -60,7 +59,7 @@
               </div>
               <div class="card-body">
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li><button type="button" class="btn btn-lg btn-block btn-outline-primary">Badge</button></li>
+                    <li><button type="button" style="margin-top:50%" class="btn btn-lg btn-block btn-outline-primary">Badge</button></li>
                 </ul>
                 <button type="button" class="btn btn-lg btn-block btn-primary">Supprimer</button>
               </div>

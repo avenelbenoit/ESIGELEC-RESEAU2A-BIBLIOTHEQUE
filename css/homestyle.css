@@ -1,7 +1,6 @@
  body {
     padding-top: 70px;
     font-family: "Times New Roman", Times, serif;
-    color: #999;
     background: rgb(255,255,230);
     font-family: "Roboto", sans-serif;
 }
@@ -21,6 +20,10 @@ a{
 
 .margtop{
     margin-top: 7%;
+}
+
+.small-margtop{
+    margin-top: 3%;
 }
 .login-form {
     border-radius: 1px;
@@ -86,4 +89,7 @@ a{
 }
 #id{
     text-align:center;
+}
+.tableContainer{
+    background-color:white;
 }
