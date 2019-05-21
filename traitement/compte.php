@@ -1,8 +1,9 @@
 <?php
-  session_start();
-  session_destroy();
-  include("methodes/methodes.php");
-  include("methodes/db_connection.php");
+session_start();
+if(isset($_SESSION['connect'])){
+  include("../methodes/methodes.php");
+}else { header("Location: ../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,3 +43,4 @@
     </div>
   </body>
 </html>
+

@@ -3,10 +3,10 @@
 	include("../methodes/db_connection.php");
 	include("../methodes/request.php");
 
-	if(isset($_GET['numero']))
+	if(isset($_SESSION['numero']))
 	{
-		echo $numero = $_GET['numero'];
-		$_SESSION['numero'] = $numero;
+		//echo $numero = $_GET['numero'];
+		//$_SESSION['numero'] = $numero;
 	}else
 	{
 		header('Location: ../index.php?pbIdentification');

@@ -1,8 +1,9 @@
 <?php
-  session_start();
-  session_destroy();
-  include("methodes/methodes.php");
-  include("methodes/db_connection.php");
+session_start();
+if(isset($_SESSION['connect'])){
+  include("../methodes/methodes.php");
+}else { header("Location: ../index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,6 +24,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="/reseau/index.php">bibliotheque</a>
       </div>
+	<a href="traitement/deconnexion.php"><button type="button" class="btn btn-primary">Se déconnecter</button></a>
     </nav>
     <div class="container margtop">
       <div class="row">
@@ -30,15 +32,13 @@
       <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
-          <div class="login-form" style='text-align:center;'>     
-            <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
-              <a class="btn btn-primary btn-lg" href="traitement/getKey.php">Connexion par badge</a>
+            <div class="avatar"><i class="material-icons">library_books</i></div>
+              <a class="btn btn-primary btn-sm" href="traitement/newLivre.php">Emprunter un livre</a>
             </div>
-	<?php if(isset($_SESSION['erreur'])){echo $_SESSION['erreur'];}  ?>
-          </div>
         </div>
         <div class="col-lg-3"></div>
       </div>
     </div>
   </body>
 </html>
+

@@ -6,7 +6,7 @@ header("Content-Type: text/html;charset=utf-8");
 
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "raspberry";
 $dbname = "bibliotheque"; // Modifier ici le nom de la base
 
 $conn = new mysqli($servername, $username, $password, $dbname);
