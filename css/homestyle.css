@@ -1,0 +1,92 @@
+ body {
+    padding-top: 70px;
+    font-family: "Times New Roman", Times, serif;
+    color: #999;
+    background: rgb(255,255,230);
+    font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 75px;
+    }
+}
+.navbar{
+    background-color: #ffcc33 !important;
+    border-color: #ffcc33 !important;
+}
+a{
+    color: #004466 !important;
+}
+
+.margtop{
+    margin-top: 7%;
+}
+.login-form {
+    border-radius: 1px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid #999999de;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form .avatar {
+    color: #fff;
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #4aba70;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.login-form .avatar i {
+    font-size: 62px;
+}
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+.login-form .form-control, .login-form .btn {
+    min-height: 40px;
+    border-radius: 2px; 
+    transition: all 0.5s;
+}
+.login-form .btn:hover, .login-form .btn:focus {
+    background: #42ae68;
+}
+.login-form .small {
+    font-size: 13px;
+}
+.navbar-default {
+    background-color: #ffcc33 !important;
+    border-color: #ffcc33 !important;
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../img/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
+.nav-center{
+    margin:10;
+}
+#id{
+    text-align:center;
+}
