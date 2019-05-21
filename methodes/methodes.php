@@ -6,7 +6,7 @@
 <?php
 
     function checkidentification(){ // Permet de s'assurer que l'utilisateur est bien connecté lorsqu'il cherche à accéder au site
-        if(!isset($_SESSION['connecte']) || $_SESSION['connecte'] != true)
+        if(!isset($_SESSION['role']))
         {
             ?>
             <script>
@@ -17,11 +17,11 @@
         }
     }
     function checkAdministrateur(){ // Permet de s'assurer que l'utilisateur est bien connecté lorsqu'il cherche à accéder au site
-      if(!isset($_SESSION['Administrateur']) || $_SESSION['Administrateur'] != true)
+      if(!isset($_SESSION['role']) || $_SESSION['role'] != "Administrateur")
       {
           ?>
           <script>
-              window.location.href="/reseau/accueilUser?pbDroits";   
+              window.location.href="/reseau/index.php?pbIdentification";   
           </script>
           <?php
           exit;
@@ -32,24 +32,29 @@
         if(isset($_GET['deconnexion']))
         {
           echo"
-            <div class='col-lg-3'></div>
-            <div class='col-lg-6'>
+            <div class='col-lg-12'>
               <div class='alert alert-success' style='text-align:center;'>
                 Vous êtes maintenant déconnecté.
               </div>
-            </div>
-            <div class='col-lg-3'></div>";
+            </div>";
         }
         if(isset($_GET['pbIdentification']))
         {
           echo"
-            <div class='col-lg-3'></div>
-            <div class='col-lg-6'>
+            <div class='col-lg-12'>
               <div class='alert alert-danger' style='text-align:center;'>
                 Vous devez vous identifier pour accéder au site.
               </div>
-            </div>
-            <div class='col-lg-3'></div>";
+            </div>";
+        }
+        if(isset($_GET['pbLogin']))
+        {
+          echo"
+            <div class='col-lg-12'>
+              <div class='alert alert-danger' style='text-align:center;'>
+                Votre badge ne semble pas être connu
+              </div>
+            </div>";
         }
     }
 

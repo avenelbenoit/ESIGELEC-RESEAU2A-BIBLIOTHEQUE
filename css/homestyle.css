@@ -53,9 +53,6 @@ a{
     border-radius: 2px; 
     transition: all 0.5s;
 }
-.login-form .btn:hover, .login-form .btn:focus {
-    background: #42ae68;
-}
 .login-form .small {
     font-size: 13px;
 }

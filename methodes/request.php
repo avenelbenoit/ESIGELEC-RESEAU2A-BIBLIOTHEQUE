@@ -1,33 +1,14 @@
 <?php
 
-    function connexion($numero,$conn)
+    function connexion($code,$conn)
     {
-        $role="";
-
-        $reponse = $conn->query("SELECT * FROM identifiants WHERE numero='$numero'");
-
-        while ($donnees = $reponse->fetch())
+        $role=false;
+        $reponse = $conn->query("SELECT * FROM identifiants WHERE numero='$code'");
+        while ($donnees = $reponse->fetch_assoc())
         {
-            echo $donnees['role'] . '<br />';
+            $role = $donnees['role'] . '<br />';
         }
-        
-        $reponse->closeCursor();
-
-
-
-        /*$result = $conn->query("SELECT * FROM identifiants WHERE numero='$numero'");
-        $req = mysql_query($result);
-        // on fait une boucle qui va faire un tour pour chaque enregistrement 
-        while($data = mysql_fetch_assoc($req)) 
-        { 
-            // on affiche les informations de l'enregistrement en cours 
-            $role = $row['role'];
-
-        } 
-
-        // on ferme la connexion à mysql 
-        mysql_close(); 
-        return $role;*/
+        return $role;
     }
 
 ?>

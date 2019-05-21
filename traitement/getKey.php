@@ -1,29 +1,26 @@
 <?php
-session_start();
-$code = exec("sudo ./reader");
-shell_exec("sudo ./buzzer.sh 0,5");
-$_SESSION['numero']=$code;
-require_once("db_connection.php");
 
-try{
-	$bdd = new PDO($dsn,$username,$password);
-	$sql="SELECT * FROM identifiants WHERE numero = :code";
-	$stmt = $bdd->prepare($sql);
-	$stmt -> bindValue(':code',$code);
-	$stmt->execute();
-	$user = $stmt ->fetch(PDO::FETCH_ASSOC);
-	if($user == false){
-		$_SESSION['erreur']="Votre badge ne semble pas être connu";
-		header("Location: ../index.php");
+	session_start();
+	$code = exec("sudo ./reader");
+	$code = "1ce5142b";
+	shell_exec("sudo ./buzzer.sh 0,5");
+	$_SESSION['numero']=$code;
+	require_once("../methodes/db_connection.php");
+	require_once("../methodes/request.php");
+	try{
+		$role=connexion($code,$conn);
+		if(strpos($role, 'Utilisateur') !== false){
+			$_SESSION['role']='Utilisateur';
+			header("Location: ../affichage/accueilUtilisateur.php");
+		}
+		else if(strpos($role, 'Administrateur') !== false){
+			$_SESSION['role']='Administrateur';
+			header("Location: ../affichage/accueilAdministrateur.php");
+		}else{
+			header("Location: ../index.php?pbLogin");
+		}
+	}catch(Exception $e){
+		die('Erreur : ' .$e->getMessage()) or die(print_r($bdd->errorInfo()));
 	}
-	else{
-		$_SESSION['connect']='oui';
-		header("Location: ../compte.php");
-	}
-}catch(Exception $e){
-	die('Erreur : ' .$e->getMessage()) or die(print_r($bdd->errorInfo()));
-}
 
-//echo $code;
-//header("Location: connexion.php?numero=$code");
 ?>

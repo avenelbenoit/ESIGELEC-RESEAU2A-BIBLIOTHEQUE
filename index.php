@@ -32,9 +32,9 @@
         <div class="col-lg-6">
           <div class="login-form" style='text-align:center;'>     
             <div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
-              <a class="btn btn-primary btn-lg" href="traitement/getKey.php">Connexion par badge</a>
+              <a class="btn btn-success btn-lg" href="traitement/getKey.php">Connexion par badge</a>
             </div>
-	<?php if(isset($_SESSION['erreur'])){echo $_SESSION['erreur'];}  ?>
+	          <?php getURL(); ?>
           </div>
         </div>
         <div class="col-lg-3"></div>
